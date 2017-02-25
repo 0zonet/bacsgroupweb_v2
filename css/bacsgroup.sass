@@ -1,0 +1,411 @@
+@import "../vendor/animate.css"
+@import "../vendor/nab.min.css"
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,300)"
+$azul: rgba(#03a9f4, .8)
+$azuln: #139AD6 
+$negro: #161617
+$plomo: #212127
+$b: #eee
+$teal: #00796b
+$verde: #00C853
+$naranjo: #FF6F00
+$morado: #651fff
+$blanco: #fff
+
+*
+	box-sizing: border-box
+
+body,html
+	height: 100%
+
+.n-container
+	width: 95%
+	max-width: 1250px
+
+h1, p, label, input, a, li,h5, h6, input, textarea, button
+	font-family: 'Source Sans Pro', sans-serif
+	font-weight: 300
+h2,h3,h4
+	font-family: 'Ubuntu', sans-serif !important
+	font-weight: 300
+	color: darken(#666, 11%)
+
+h2
+	span
+		color: $azuln
+		font-weight: 700
+
+
+
+.cursor
+	color: $azuln
+.slider-navigation
+	display: none !important 
+
+#header
+	position: relative
+	height: 100%
+	background-image: url("../../images/services-compressor.jpg")
+	background-size: cover
+	background-position: center center
+	background-attachment: fixed
+#home, #characteristics, #contact
+	width: 100%
+	position: relative
+	h2
+		text-align: center
+		font-size: 2em
+		position: relative
+		z-index: 500
+	.f-row
+		width:100%
+		margin-top: 2em
+		margin-bottom: 2em
+		display: flex
+
+// All sections
+
+#home
+	height: 100%
+	.n-container
+		height:100%
+		display: flex
+		flex-direction: column
+		justify-content: center
+		align-items: center
+		h1
+			color: $b
+			font-size: 3em
+			font-weight: 300
+			&:first-letter
+				color: $azuln
+				font-weight: 400
+		p
+			color: $b
+			font-size: 1.5em
+
+#aboutus
+	height: 70vh
+	color: $negro
+	h2
+		font-size: 2em
+	h3
+		font-size: 1.1em
+		font-weight: 400
+	i
+		font-size: 2.2em
+		background-color: $azuln
+		color: #fff
+		padding: .5em
+		border-radius: 50%
+		margin-bottom: .5em
+	.minus-top
+		margin-top: -7em
+	p
+		text-align: justify
+
+#services
+	height: 100%
+	min-height: 700px
+	background-image: url("../../images/services.jpg")
+	background-position: center
+	background-size: cover
+	.bg-image
+		height: 100%
+		.box
+			height: 100%
+	
+	.servicios
+		left: -8%
+		background-color: rgba($b, .9)
+		min-height: 404px
+		position: relative
+		.box
+			padding: 1.5em		
+		h2, p
+			font-family: 'Source Sans Pro', sans-serif		
+		h2
+		 font-size: 1.1em
+		 font-weight: 400
+		 color: darken(#666, 11%)
+		p
+			color: #666
+			text-align: justify;
+		span
+			font-size: 2.5em
+			padding: .5em .5em .5em 0
+			color: $azuln
+	p
+		text-align: justify !important
+
+	.services-desc
+		//background: linear-gradient(to right,rgba($plomo,.9) 70%, transparent)
+		background-color: rgba($plomo, .9)
+		h2
+			font-size: 2em
+		h2,p
+			text-align: left
+			color: $b
+			span
+				font-weight: 700
+				color: $azuln
+
+#characteristics
+	padding-top: 4em
+	.row	
+		article
+			background-color: #fff
+			padding: 2em .5em
+			margin-bottom: 2em
+			cursor: pointer
+			transition: .5s
+			.bg-icon
+				width:110px
+				height: 110px
+				display: table
+				margin: auto
+				background-position: center
+				background-size: 100%
+				background-repeat: no-repeat
+				opacity: .9
+				&.one
+					background-image: url(../../images/icons/social-media.png)
+				&.two
+					background-image: url(../../images/icons/website.png)
+				&.three
+					background-image: url(../../images/icons/employee.png)
+		article
+			&:hover
+				transform: scale(1.1)
+				i
+					color: $b
+					box-shadow: 0 0 0 50px $azuln inset
+
+			h3, p
+				width: 80%
+				display:table
+				margin: 0 auto
+				
+			h3
+				margin-bottom: 1em
+				margin-top: .5em
+				color: $azuln
+				font-weight: 400
+				text-align: center
+			p
+				text-align: justify
+
+#contact
+	height: 100vh
+	display: flex
+	flex-flow: row wrap
+	align-items: center
+	padding-bottom: 1em
+	h2,p
+		color: $b
+
+	background-color: $negro
+	background-image: url(../../images/contact.jpg)
+	background-size: cover
+	background-position: center
+	form
+		padding: 1.5em
+		background-color: $blanco
+		input, button, textarea
+			vertical-align: top
+			box-shadow: 0 0 0 1px $azuln
+			border: none
+			padding: 1em
+			width: 100%
+			font-size: 1em
+			&:focus
+				outline: 1px #2BA4DA
+		button
+			background-color: $azuln
+			color: $b
+			cursor: pointer
+			transition: .3s
+			&:hover
+				background-color: $azul
+				box-shadow: 0 0 0 1px $azul
+		textarea
+			resize: none
+			height: 150px
+	.message
+		font-size: 2em
+		text-align: center
+		color: $azuln
+
+#footer
+	background-color: $negro
+	position: relative
+	padding: 1em
+	padding-bottom: 2em
+	p,a
+		color: $b
+	h2
+		color: $azul
+	.uparrow
+		$sizearrow: 50px
+		width: $sizearrow
+		height: $sizearrow
+		line-height: $sizearrow
+		text-align: center
+		display: block
+		margin: auto
+		background-color: $plomo
+	p
+		text-align: justify
+	.hr
+		height: 1px
+		box-shadow: 0 1px 0 0 $plomo
+	.small
+		font-size: .9em
+		color: lighten($plomo, 10%)
+	.social
+		display: flex
+		a
+			display: block
+			width: 30px
+			height: 30px
+			line-height: 30px
+			text-align: center
+			background-color: lighten($plomo, 10%)
+			margin-right: 1em
+			transition: .3s
+			&.facebook:hover
+				background-color: #3B5998
+			&.twitter:hover
+				background-color: #1DA1F2
+	.contact
+		list-style: none
+		li
+			margin-top: .5em
+		a
+			text-decoration: none
+			i
+				margin-right: 1em
+	
+
+//Resets NAB
+.nab
+	margin-bottom:60px
+	background-color: transparent
+	position: fixed
+	top: 0
+	left: 0
+	box-shadow: 0 0 0 0 $negro inset,
+	0 0 0 0 $negro inset
+	transition: box-shadow .5s !important
+	z-index: 999
+	.nab-desktop
+		a
+			font-weight: 500 
+			&:first-child
+				margin-left: 0
+			&:hover
+				box-shadow: 0 100px 0 0 rgba(3,169,244,.8) inset
+	.nab-mobile
+	 position: fixed
+	 height: 150vh
+
+.nab.solid
+	box-shadow: 0 100px 0 0 rgba($plomo, 1) inset
+
+.brand 
+	margin-right: auto
+	padding: 0 .4em !important
+
+//medium
+@media only screen and (max-width: 980px)
+	#header
+		height: 500px
+	.nab
+		box-shadow: 0 100px 0 0 $negro inset
+		position: absolute
+		background-color: $negro
+		margin-bottom: 0
+	#home
+		.n-container
+			height: 100%
+		.logo
+			margin-top: 70px
+			width: 110px !important
+			height: 110px !important
+	#characteristics
+		position: relative
+		.f-row
+			flex-direction: column
+			align-items: center
+			article
+				width: 80%
+		.card
+			width: 300px
+			margin-bottom: 2.5em !important
+			&:last-child
+				margin-bottom: 0 !important
+			&:first-child
+				margin-top: 2.5em
+	#services, #aboutus, #contact
+		height: auto
+		.servicios
+			left: 0
+		.services-desc
+			padding: 1em !important
+			height: 300px
+	#aboutus
+		.minus-top
+			margin-top: 0
+
+
+// small
+@media screen and (max-width: 480px)
+	.card
+		width: 90%
+		margin: auto
+
+
+
+/*REQUIERED*/
+
+.hiden
+	opacity: 0
+.visible
+	opacity: 1 
+.row
+	margin: 0
+
+
+/*Helppers*/
+
+.black
+	background-color: $negro
+
+.text-center
+	text-align: center
+	padding: .5em
+.text-left
+	text-align: left
+.gray-text
+	color: darken(#666, 11%)
+.full-height
+	height: 100%
+.no-margin
+	margin: 0 !important
+.no-padding
+	padding: 0 !important
+.card
+	margin: .5em
+.content-center
+	display: flex
+	justify-content: center
+.top-space
+	margin-top: 2em !important
+.bottom-space
+	margin-bottom: 2em !important
+.line
+	box-shadow: 0 1px 0 0 #299AD6
+	width: 150px
+	height: 1px
+	display: block
+	margin: auto
